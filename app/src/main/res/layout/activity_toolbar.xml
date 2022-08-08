@@ -21,11 +21,49 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_user" />
-
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mensagens"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewIcon"
+            app:layout_constraintStart_toEndOf="@id/imageViewUser"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notificações"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewIcon"
+            app:layout_constraintStart_toEndOf="@id/imageViewUser"
+            app:layout_constraintTop_toTopOf="parent" />
+        <SearchView
+            android:visibility="gone"
+            android:layout_width="273dp"
+            android:layout_height="28dp"
+            android:background="@drawable/bg_search"
+            android:paddingStart="30dp"
+            android:queryHint="Busca do Twitter"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewIcon"
+            app:layout_constraintStart_toEndOf="@id/imageViewUser"
+            app:layout_constraintTop_toTopOf="parent" />
         <ImageView
             android:id="@+id/imageViewLogo"
             android:layout_width="@dimen/default_image_logo"
             android:layout_height="@dimen/default_image_logo"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageViewIcon"
             app:layout_constraintStart_toEndOf="@id/imageViewUser"
@@ -33,13 +71,25 @@
             app:srcCompat="@drawable/ic_logo_blue" />
 
         <ImageView
+            android:visibility="gone"
+            android:id="@+id/settingsViewIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_settings" />
+        <ImageView
             android:id="@+id/imageViewIcon"
             android:layout_width="@dimen/default_image_btn"
             android:layout_height="@dimen/default_image_btn"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_start" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.appcompat.widget.Toolbar>
